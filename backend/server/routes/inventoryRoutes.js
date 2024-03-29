@@ -2,17 +2,31 @@ const express = require('express');
 const pool = require('../db');
 const router = express.Router();
 
+// async function testDatabaseConnection() {
+//   try {
+//     // Query to select the current version of PostgreSQL
+//     const result = await pool.query('SELECT version();');
+
+//     // Log the result to the console
+//     console.log('Connected to PostgreSQL database successfully INVENTORY ROUTE PAGE:');
+//     console.log(result.rows[0].version);
+//   } catch (error) {
+//     console.error('Error connecting to PostgreSQL database:', error.message);
+//   } 
+// }
+// // Call the function to test the database connection
+// testDatabaseConnection();
 
 router.get('/categories', async (req, res) => {
   try {
     const allCategories = await pool.query('SELECT * FROM categories');
+    res.setHeader('Content-Type', 'application/json');
     res.json(allCategories.rows);
   } catch (error) {
     console.error(error.message);
     res.status(500).send('Server error');
   }
 });
-
 
 router.post('/categories', async (req, res) => {
   try {
@@ -53,7 +67,7 @@ router.post('/inventory', async (req, res) => {
     const existingItem = await pool.query(
       'SELECT * FROM inventory WHERE LOWER(name) = $1 AND category_id = $2',
       [trimmedName, category_id]
-    );
+  );
 
     if (existingItem.rows.length > 0) {
       
