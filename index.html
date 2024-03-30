@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVNT Inventory Tracking</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>NVNT Inventory Tracking</h1>
+        <div>
+            <label for="category">Select Category:</label>
+            <select id="category">
+                <option value="vegetables">Vegetables</option>
+                <option value="meat">Meat</option>
+                <option value="frozen">Frozen Items</option>
+                <option value="beverages">Beverages</option>
+                <option value="supplier">Supplier</option> <!-- Added Supplier Category -->
+            </select>
+        </div>
+        <div id="vegetables" class="produce-options">
+            <label for="vegetableProduce">Select Produce:</label>
+            <select id="vegetableProduce">
+                <option value="Lettuce">Lettuce</option>
+                <option value="Tomatoes">Tomatoes</option>
+                <option value="Onions">Onions</option>
+                <option value="Bell Peppers">Bell Peppers</option>
+                <option value="Carrots">Carrots</option>
+            </select>
+            <div class="weight-box" id="vegetableWeight">lbs</div>
+        </div>
+        <div id="meat" class="produce-options">
+            <label for="meatProduce">Select Meat:</label>
+            <select id="meatProduce">
+                <option value="Chicken Breast">Chicken Breast</option>
+                <option value="Ground Beef">Ground Beef</option>
+                <option value="Pork Chops">Pork Chops</option>
+                <option value="Salmon Fillet">Salmon Fillet</option>
+                <option value="Lamb Rack">Lamb Rack</option>
+            </select>
+            <div class="weight-box" id="meatWeight">lbs</div>
+        </div>
+        <div id="frozen" class="produce-options">
+            <label for="frozenProduce">Select Frozen Item:</label>
+            <select id="frozenProduce">
+                <option value="Frozen Fries">Frozen Fries</option>
+                <option value="Frozen Fish">Frozen Fish</option>
+                <option value="Frozen Pizza">Frozen Pizza</option>
+            </select>
+        </div>
+        <div id="beverages" class="produce-options">
+            <label for="beverageProduce">Select Beverage:</label>
+            <select id="beverageProduce">
+                <option value="Soda Cans">Soda Cans</option>
+                <option value="Bottled Water">Bottled Water</option>
+                <option value="Orange Juice">Orange Juice</option>
+                <option value="Iced Tea">Iced Tea</option>
+            </select>
+        </div>
+        <div id="supplier" class="produce-options supplier-options">
+            <label for="supplierProduce">Select Supplier:</label>
+            <select id="supplierProduce">
+                <option value="Supplier 1">Supplier 1</option>
+                <option value="Supplier 2">Supplier 2</option>
+                <!-- Add more supplier options as needed -->
+            </select>
+        </div>
+        
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" min="1" value="1">
+        </div>
+        <button class="btn" id="addBtn">Add Item to Cart</button>
+        <div class="total-price" id="totalPrice">Total Price: $0.00</div>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Supplier</th>
+                    <th>Unit Price</th>
+                    <th>Total Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
