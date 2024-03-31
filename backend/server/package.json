@@ -1,13 +1,12 @@
 {
-  "name": "server",
+  "name": "node.js",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "NVMT team",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -17,5 +16,15 @@
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.0",
     "pg": "^8.11.3"
-  }
+  },
+  "devDependencies": {},
+  "description": "Backend of NVMT Smart",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilBhamani/NVMT-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sahilBhamani/NVMT-2/issues"
+  },
+  "homepage": "https://github.com/sahilBhamani/NVMT-2#readme"
 }
