@@ -4,6 +4,9 @@ import './Suppliers.css';
 import { useNavigate } from 'react-router-dom';
 
 const Suppliers = () => {
+
+    document.title = 'Suppliers';
+    
     const navigate = useNavigate(); 
     const [suppliers, setSuppliers] = useState([]);
     const [loading, setLoading] = useState(true);

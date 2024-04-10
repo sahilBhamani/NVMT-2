@@ -3,6 +3,9 @@ import axios from 'axios';
 import './OrdersAndPurchases.css'; 
 
 const OrdersAndPurchases = () => {
+
+    document.title = 'Orders & Purchases';
+    
     const [orders, setOrders] = useState([]);
     const [suppliers, setSuppliers] = useState([]);
     const [loading, setLoading] = useState(true);

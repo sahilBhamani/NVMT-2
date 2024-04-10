@@ -11,6 +11,9 @@ import suppliersIcon from '../assets/supplier.webp';
 // Other imports and code
 
 const Dashboard = () => {
+
+  document.title = 'Dashboard';
+  
   const navigate = useNavigate();
 
   const handleLogout = () => {
