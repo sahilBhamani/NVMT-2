@@ -17,8 +17,8 @@
 .leftSide {
   flex: 6;
   position: relative; /* Required for z-index */
-  background-image: url('C:\\Users\\yafie\\Downloads\\NVMT-2\\frontend\\src\\assets\\restaurant.png');
-  background-size: cover;
+  background-image: url('..\\frontend\\src\\assets\\restaurant.png');
+  background-size: 100% 100%; /* Ensure the background image covers the entire screen */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,6 @@
   z-index: 0; /* Ensure the overlay is behind the image */
 }
 
-
 .logoImage {
   width: 70px; /* Adjust size as needed */
   filter: none; /* Remove any filter effects applied */
@@ -55,6 +54,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+  background-size: cover;
 }
 
 .getStartedTitle {
@@ -92,7 +92,6 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .homeSignupButton{
   padding: 15px 30px;
