@@ -3,6 +3,9 @@ import axios from 'axios';
 import './Inventory.css';
 
 const Inventory = () => {
+
+  document.title = 'Inventory';
+  
   const [inventoryItems, setInventoryItems] = useState([]);
   const [categories, setCategories] = useState([]);
   const [suppliers, setSuppliers] = useState([]);
@@ -107,7 +110,7 @@ const Inventory = () => {
               value={newCategoryName}
               onChange={(e) => setNewCategoryName(e.target.value)}
             />
-            <button type="submit">Add Category</button>
+            <button type="submit" className="add-category-button">Add Category</button>
           </form>
         </div>
         <div className="addItemSection">
@@ -176,7 +179,7 @@ const Inventory = () => {
               value={newItem.unit_of_measurement}
               onChange={(e) => setNewItem({ ...newItem, unit_of_measurement: e.target.value })}
             />
-            <button type="submit">Add Item</button>
+            <button type="submit" className="add-item-button">Add Item</button>
           </form>
         </div>
       </div>
@@ -216,4 +219,3 @@ const Inventory = () => {
 };
 
 export default Inventory;
-
